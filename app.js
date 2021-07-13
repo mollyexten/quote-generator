@@ -12,9 +12,11 @@ const renderQuote = (quote) => {
   const quoteDiv = document.querySelector(".quote-div")
   const quoteText = document.createElement('p')
   quoteText.innerText = quote.quoteText
+  quoteText.classList = "quote-text"
   quoteDiv.append(quoteText)
   const quoteAuthor = document.createElement('p')
   quoteAuthor.innerText = quote.quoteAuthor
+  quoteAuthor.classList = "quote-author"
   quoteDiv.append(quoteAuthor)
   genreButton.id = quote.quoteGenre
   genreButton.textContent = `more on ${quote.quoteGenre}`

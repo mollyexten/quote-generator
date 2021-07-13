@@ -1,0 +1,20 @@
+@mixin darkMode {
+  background-color: $dark;
+  color: $light;
+}
+
+@mixin lightMode {
+  background-color: $light;
+  color: $dark;
+}
+
+@mixin btnStyles {
+  background-color: $bright;
+  border: none;
+  box-shadow: $shading;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: inherit;
+  padding: 2%;
+  font-family: $secondaryFont;
+}
