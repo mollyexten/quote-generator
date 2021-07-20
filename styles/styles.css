@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Suez+One&display=swap");
-body {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 18px;
-  height: 100%;
+html body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,53 +10,57 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+  height: 100vh;
   margin: 0;
-  background-color: gray;
+  background-image: url("../assets/alaksiej-carankievic-fBib2mhl-ZE-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-body header {
+html body header {
   background-color: #26292C;
   color: #FFFAFB;
-  height: 10vh;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-body header h1 {
-  font-size: 8vw;
+html body header h1 {
+  margin: 2vh 0vw;
+  font-size: 9vmin;
 }
 
-body main {
-  height: 80vh;
+html body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 0 auto;
 }
 
-body main .cardholder {
-  height: 80%;
+html body main .cardholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,10 +71,10 @@ body main .cardholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 80%;
 }
 
-body main .cardholder .quote-div {
-  width: 80vw;
+html body main .cardholder .quote-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,54 +82,90 @@ body main .cardholder .quote-div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  width: 80vw;
   background-color: #FFFAFB;
   color: #26292C;
 }
 
-body main .cardholder .quote-div .quote-text {
-  padding: 2%;
+html body main .cardholder .quote-div .quote-text {
+  margin: 0;
+  padding: 2vmax;
+  font-size: 6vmin;
 }
 
-body main .cardholder .quote-div .quote-author {
-  padding: 2%;
+html body main .cardholder .quote-div .quote-author {
+  margin: 0;
+  padding: 2vmax;
+  font-size: 6vmin;
   font-family: "Suez One", serif;
 }
 
-body main .button-div {
+html body main .button-div {
   height: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-body main .button-div button {
+html body main .button-div button {
   background-color: #ECC30B;
   border: none;
   -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
           box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
   cursor: pointer;
   border-radius: 8px;
-  font-size: inherit;
   padding: 2%;
   font-family: "Suez One", serif;
+  font-size: 5vmin;
 }
 
-body main .button-div button:hover {
+html body main .button-div button:hover {
   background-color: #ec990b;
 }
 
-body footer {
-  background-color: #26292C;
-  color: #FFFAFB;
-  height: 10vh;
+html body footer {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  background-color: #26292C;
+  color: #FFFAFB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1%;
+}
+
+html body footer p {
+  margin: 0;
+  font-size: 2vmin;
+}
+
+html body footer .api-link {
+  font-family: "Suez One", serif;
+}
+
+a:link {
+  color: #FFFAFB;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #FFFAFB;
 }
 /*# sourceMappingURL=styles.css.map */

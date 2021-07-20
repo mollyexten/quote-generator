@@ -1,11 +1,28 @@
-@mixin darkMode {
+@mixin darkSection {
   background-color: $dark;
   color: $light;
 }
 
-@mixin lightMode {
+@mixin lightSection {
   background-color: $light;
   color: $dark;
+}
+
+@mixin centerColumnFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin horizontalFlex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin quoteFormatting {
+  margin: 0;
+  padding: 2vmax;
+  font-size: 6vmin;
 }
 
 @mixin btnStyles {
@@ -14,7 +31,7 @@
   box-shadow: $shading;
   cursor: pointer;
   border-radius: 8px;
-  font-size: inherit;
   padding: 2%;
   font-family: $secondaryFont;
+  font-size: 5vmin;
 }

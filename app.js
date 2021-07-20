@@ -11,7 +11,7 @@ const removeQuote = () => {
 const renderQuote = (quote) => {
   const quoteDiv = document.querySelector(".quote-div")
   const quoteText = document.createElement('p')
-  quoteText.innerText = quote.quoteText
+  quoteText.innerText = `"${quote.quoteText}"`
   quoteText.classList = "quote-text"
   quoteDiv.append(quoteText)
   const quoteAuthor = document.createElement('p')

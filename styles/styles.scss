@@ -1,70 +1,84 @@
 @import "./variables";
 @import "./templates";
 
-body {
-  font-family: $primaryFont;
-  font-size: 18px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0;
-  background-color: gray;
-  box-sizing: border-box;
-  header {
-    @include darkMode;
-    height: 10vh;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    h1 {
-      font-size: 8vw;
-    }
-  }
-  main {
-    height: 80vh;
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    .cardholder {
-      height: 80%;
-      display: flex;
-      flex-direction: column;
+html {
+  body {
+    @include centerColumnFlex;
+    font-family: $primaryFont;
+    font-size: 24px;
+    height: 100vh;
+    margin: 0;
+    background-image: url("../assets/alaksiej-carankievic-fBib2mhl-ZE-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    header {
+      @include darkSection;
+      flex-shrink: 0;
+      @include horizontalFlex;
       justify-content: center;
-      .quote-div {
-        width: 80vw;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        @include lightMode;
-        .quote-text {
-          padding: 2%;
+      h1 {
+        margin: 2vh 0vw;
+        font-size: 9vmin;
+      }
+    }
+    main {
+      @include centerColumnFlex;
+      flex: 1 0 auto;
+      margin: 0 auto;
+      .cardholder {
+        @include centerColumnFlex;
+        height: 80%;
+        .quote-div {
+          @include centerColumnFlex;
+          align-content: center;
+          width: 80vw;
+          @include lightSection;
+          .quote-text {
+            @include quoteFormatting;
+          }
+          .quote-author {
+            @include quoteFormatting;
+            font-family: $secondaryFont;
+          }
         }
-        .quote-author {
-          padding: 2%;
-          font-family: $secondaryFont;
+      }
+      .button-div {
+        height: 20%;
+        @include horizontalFlex;
+        justify-content: space-between;
+        button {
+          @include btnStyles;
+        }
+        button:hover {
+          background-color: $selected;
         }
       }
     }
-    .button-div {
-      height: 20%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      button {
-        @include btnStyles;
+    footer {
+      flex-shrink: 0;
+      @include darkSection;
+      @include horizontalFlex;
+      justify-content: space-between;
+      padding: 1%;
+      p {
+        margin: 0;
+        font-size: 2vmin;
       }
-      button:hover {
-        background-color: $selected;
+      .api-link {
+        font-family: $secondaryFont;
       }
     }
-  }
-  footer {
-    @include darkMode;
-    height: 10vh;
-    flex-shrink: 0;
   }
 }
+
+a:link {
+  color: $light;
+  text-decoration: none;
+}
+
+a:visited {
+  color: $light;
+}
+
