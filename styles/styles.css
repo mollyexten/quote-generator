@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Suez+One&display=swap");
+html {
+  height: 100%;
+}
+
 html body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,7 +16,7 @@ html body {
           justify-content: center;
   font-family: "Josefin Sans", sans-serif;
   font-size: 24px;
-  height: 100vh;
+  height: 100%;
   margin: 0;
   background-image: url("../assets/alaksiej-carankievic-fBib2mhl-ZE-unsplash.jpg");
   background-size: cover;
