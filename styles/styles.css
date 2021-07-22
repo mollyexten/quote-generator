@@ -4,6 +4,7 @@ html {
 }
 
 html body {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,7 +17,6 @@ html body {
           justify-content: center;
   font-family: "Josefin Sans", sans-serif;
   font-size: 24px;
-  height: 100%;
   margin: 0;
   background-image: url("../assets/alaksiej-carankievic-fBib2mhl-ZE-unsplash.jpg");
   background-size: cover;
@@ -26,9 +26,7 @@ html body {
           box-sizing: border-box;
 }
 
-html body header {
-  background-color: #26292C;
-  color: #FFFAFB;
+header {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   display: -webkit-box;
@@ -40,31 +38,19 @@ html body header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #26292C;
+  color: #FFFAFB;
 }
 
-html body header h1 {
+header h1 {
   margin: 2vh 0vw;
   font-size: 9vmin;
 }
 
-html body main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  margin: 0 auto;
-}
-
-html body main .cardholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,10 +61,25 @@ html body main .cardholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 80%;
+  margin: 0 auto;
 }
 
-html body main .cardholder .quote-div {
+main .cardholder {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .cardholder .quote-div {
+  width: 80vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,25 +92,24 @@ html body main .cardholder .quote-div {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  width: 80vw;
   background-color: #FFFAFB;
   color: #26292C;
 }
 
-html body main .cardholder .quote-div .quote-text {
+main .cardholder .quote-div .quote-text {
   margin: 0;
   padding: 2vmax;
   font-size: 6vmin;
 }
 
-html body main .cardholder .quote-div .quote-author {
+main .cardholder .quote-div .quote-author {
   margin: 0;
   padding: 2vmax;
   font-size: 6vmin;
   font-family: "Suez One", serif;
 }
 
-html body main .button-div {
+main .button-div {
   height: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -122,8 +122,8 @@ html body main .button-div {
           justify-content: space-between;
 }
 
-html body main .button-div button {
-  background-color: #ECC30B;
+main .button-div button {
+  background-color: #ec990b;
   border: none;
   -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
           box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
@@ -134,15 +134,13 @@ html body main .button-div button {
   font-size: 4vmin;
 }
 
-html body main .button-div button:hover {
-  background-color: #ec990b;
+main .button-div button:hover {
+  background-color: #ECC30B;
 }
 
-html body footer {
+footer {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  background-color: #26292C;
-  color: #FFFAFB;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,14 +151,16 @@ html body footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1%;
+  background-color: #26292C;
+  color: #FFFAFB;
 }
 
-html body footer p {
+footer p {
   margin: 0;
   font-size: 2vmin;
 }
 
-html body footer .api-link {
+footer .api-link {
   font-family: "Suez One", serif;
 }
 

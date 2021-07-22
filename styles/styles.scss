@@ -1,85 +1,92 @@
 @import "./variables";
 @import "./templates";
 
+// Page styles
 html {
   height: 100%;
   body {
-    @include centerColumnFlex;
+    height: 100%;
+    @include flexSetup(vertical);
     font-family: $primaryFont;
     font-size: 24px;
-    height: 100%;
     margin: 0;
     background-image: url("../assets/alaksiej-carankievic-fBib2mhl-ZE-unsplash.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     box-sizing: border-box;
-    header {
-      @include darkSection;
-      flex-shrink: 0;
-      @include horizontalFlex;
-      justify-content: center;
-      h1 {
-        margin: 2vh 0vw;
-        font-size: 9vmin;
+  }
+}
+
+// Header styles
+header {
+  flex-shrink: 0;
+  @include flexSetup(horizontal);
+  justify-content: center;
+  @include colorScheme(dark);
+  h1 {
+    margin: 2vh 0vw;
+    font-size: 9vmin;
+  }
+}
+
+// Main styles
+main {
+  flex: 1 0 auto;
+  @include flexSetup(vertical);
+  margin: 0 auto;
+  .cardholder {
+    height: 80%;
+    @include flexSetup(vertical);
+    .quote-div {
+      width: 80vw;
+      @include flexSetup(vertical);
+      align-content: center;
+      @include colorScheme(light);
+      .quote-text {
+        @include quoteFormatting;
       }
-    }
-    main {
-      @include centerColumnFlex;
-      flex: 1 0 auto;
-      margin: 0 auto;
-      .cardholder {
-        @include centerColumnFlex;
-        height: 80%;
-        .quote-div {
-          @include centerColumnFlex;
-          align-content: center;
-          width: 80vw;
-          @include lightSection;
-          .quote-text {
-            @include quoteFormatting;
-          }
-          .quote-author {
-            @include quoteFormatting;
-            font-family: $secondaryFont;
-          }
-        }
-      }
-      .button-div {
-        height: 20%;
-        @include horizontalFlex;
-        justify-content: space-between;
-        button {
-          @include btnStyles;
-        }
-        button:hover {
-          background-color: $selected;
-        }
-      }
-    }
-    footer {
-      flex-shrink: 0;
-      @include darkSection;
-      @include horizontalFlex;
-      justify-content: space-between;
-      padding: 1%;
-      p {
-        margin: 0;
-        font-size: 2vmin;
-      }
-      .api-link {
+      .quote-author {
+        @include quoteFormatting;
         font-family: $secondaryFont;
       }
     }
   }
+  .button-div {
+    height: 20%;
+    @include flexSetup(horizontal);
+    justify-content: space-between;
+    button {
+      @include btnStyles;
+    }
+    button:hover {
+      background-color: $selected;
+    }
+  }
 }
 
+// Footer styles
+footer {
+  flex-shrink: 0;
+  @include flexSetup(horizontal);
+  justify-content: space-between;
+  padding: 1%;
+  @include colorScheme(dark);
+  p {
+    margin: 0;
+    font-size: 2vmin;
+  }
+  .api-link {
+    font-family: $secondaryFont;
+  }
+}
+
+// Global link styles
 a:link {
-  color: $light;
+  color: $offWhite;
   text-decoration: none;
 }
-
 a:visited {
-  color: $light;
+  color: $offWhite;
 }
 
