@@ -28,6 +28,10 @@ const loadRandom = async () => {
     const randomURL = "https://quote-garden.herokuapp.com/api/v3/quotes/random"
     const response = await axios.get(randomURL)
     const quoteData = response.data.data[0]
+    if (quoteData.quoteText.length > 220) {
+      loadRandom();
+      return;
+    }
     renderQuote(quoteData)
     return response
   } catch (err) {
@@ -41,6 +45,10 @@ const loadSimilar = async (genre) => {
     const similarURL = `https://quote-garden.herokuapp.com/api/v3/quotes/random?genre=${genre}`
     const response = await axios.get(similarURL)
     const quoteData = response.data.data[0]
+    if (quoteData.quoteText.length > 220) {
+      loadSimilar(genre);
+      return;
+    }
     renderQuote(quoteData)
     return response
   } catch (err) {
