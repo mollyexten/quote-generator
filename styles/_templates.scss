@@ -1,22 +1,21 @@
-@mixin darkSection {
-  background-color: $dark;
-  color: $light;
+@mixin colorScheme($theme) {
+  @if $theme == dark {
+    background-color: $darkGray;
+    color: $offWhite;
+  } @else {
+    background-color: $offWhite;
+    color: $darkGray;
+  }
 }
 
-@mixin lightSection {
-  background-color: $light;
-  color: $dark;
-}
-
-@mixin centerColumnFlex {
+@mixin flexSetup($orientation) {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-@mixin horizontalFlex {
-  display: flex;
-  align-items: center;
+  @if $orientation == horizontal {
+    align-items: center;
+  } @else {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 @mixin quoteFormatting {
@@ -26,7 +25,7 @@
 }
 
 @mixin btnStyles {
-  background-color: $bright;
+  background-color: $default;
   border: none;
   box-shadow: $shading;
   cursor: pointer;
@@ -35,3 +34,4 @@
   font-family: $secondaryFont;
   font-size: 4vmin;
 }
+
