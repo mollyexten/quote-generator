@@ -42,9 +42,33 @@ header {
   color: #FFFAFB;
 }
 
-header h1 {
+header div {
+  width: 100%;
+  overflow: hidden;
+}
+
+header div h1 {
   margin: 2vh 0vw;
   font-size: 9vmin;
+  text-align: center;
+  -webkit-animation: 1s slide-left 0.5s forwards;
+          animation: 1s slide-left 0.5s forwards;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+@-webkit-keyframes slide-left {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slide-left {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 main {

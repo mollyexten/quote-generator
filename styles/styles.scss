@@ -24,9 +24,22 @@ header {
   @include flexSetup(horizontal);
   justify-content: center;
   @include colorScheme(dark);
-  h1 {
-    margin: 2vh 0vw;
-    font-size: 9vmin;
+  div {
+    width: 100%;
+    overflow: hidden;
+    h1 {
+      margin: 2vh 0vw;
+      font-size: 9vmin;
+      text-align: center;
+      animation: 1s slide-left 0.5s forwards;
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@keyframes slide-left {
+  to {
+    transform: translateX(0);
   }
 }
 
