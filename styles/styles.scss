@@ -6,17 +6,28 @@ html {
   height: 100%;
   body {
     height: 100%;
-    @include flexSetup(vertical);
-    font-family: $primaryFont;
-    font-size: 24px;
-    margin: 0;
-    background-image: url("../assets/alaksiej-carankievic-fBib2mhl-ZE-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     box-sizing: border-box;
+    margin: 0;
+    @include flexSetup(vertical);
+    font: {
+      family: $primaryFont;
+      size: 24px;
+    }
+    background: {
+      image: url("../assets/alaksiej-carankievic-fBib2mhl-ZE-unsplash.jpg");
+      size: cover;
+      position: center;
+      attachment: fixed;
+    }
   }
 }
+
+// Header Animation Variables
+// Huge thanks to the person who made this Code Pen: https://codepen.io/5t3ph/pen/qBdJVEq
+$chWidth: 4.75vmin;
+$chCount: 9;
+$typeDuration: 180ms * $chCount;
+
 
 // Header styles
 header {
@@ -31,17 +42,70 @@ header {
       margin: 2vh 0vw;
       font-size: 9vmin;
       text-align: center;
-      animation: 1s slide-left 0.5s forwards;
-      transform: translateX(-100%);
+      .type-animation {
+        display: inline-flex;
+        width: 0;
+        overflow: hidden;
+        padding-right: 0.2vmin;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: -1vmin;
+          bottom: 1vmin;
+          width: 1vmin;
+          border-right: 2px solid transparent;
+        }
+        &.animating {
+          animation: type $typeDuration;
+          animation-fill-mode: forwards;
+          animation-delay: 0.5s;
+          &:after {
+            $cursorLoopCount: ((($chCount + 1) *180)/320) + 3;
+            animation: cursor 320ms $cursorLoopCount ease-in-out;
+          }
+        }
+      }
+      // animation: 1s slide-left 0.5s forwards;
+      // transform: translateX(-100%);
     }
   }
 }
 
-@keyframes slide-left {
-  to {
-    transform: translateX(0);
+@keyframes cursor {
+	0%,
+	100% {
+		border-color: $darkGray;
+	}
+	50% {
+		border-color: $offWhite;
+	}
+	100% {
+		width: 0;
+	}
+}
+
+$frameSize: 100 / $chCount;
+
+@keyframes type {
+  @for $ch from 1 to $chCount {
+    $frame: $ch * $frameSize;
+    #{$frame}% {
+      width: $ch * $chWidth;
+    }
+  }
+  100% {
+    width: ($chCount - 1) * $chWidth;
+    padding-right: 0;
   }
 }
+
+// @keyframes slide-left {
+//   to {
+//     transform: translateX(0);
+//   }
+// }
 
 // Main styles
 main {
