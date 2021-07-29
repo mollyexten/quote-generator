@@ -1,59 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Suez+One&display=swap");
-html {
-  height: 100%;
-}
-
-html body {
-  height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 24px;
-  background-image: url("../assets/alaksiej-carankievic-fBib2mhl-ZE-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-header {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #26292C;
-  color: #FFFAFB;
-}
-
-header div {
-  width: 100%;
-  overflow: hidden;
-}
-
-header div h1 {
-  margin: 2vh 0vw;
-  font-size: 9vmin;
-  text-align: center;
-}
-
-header div h1 .type-animation {
+.type-animation {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -63,7 +9,7 @@ header div h1 .type-animation {
   position: relative;
 }
 
-header div h1 .type-animation:after {
+.type-animation:after {
   content: "";
   position: absolute;
   right: 0;
@@ -73,7 +19,7 @@ header div h1 .type-animation:after {
   border-right: 2px solid transparent;
 }
 
-header div h1 .type-animation.animating {
+.type-animation.animating {
   -webkit-animation: type 1620ms;
           animation: type 1620ms;
   -webkit-animation-fill-mode: forwards;
@@ -82,7 +28,7 @@ header div h1 .type-animation.animating {
           animation-delay: 0.5s;
 }
 
-header div h1 .type-animation.animating:after {
+.type-animation.animating:after {
   -webkit-animation: cursor 320ms 8.625 ease-in-out;
           animation: cursor 320ms 8.625 ease-in-out;
 }
@@ -173,6 +119,55 @@ header div h1 .type-animation.animating:after {
     width: 38vmin;
     padding-right: 0;
   }
+}
+
+html {
+  height: 100%;
+}
+
+html body {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+  background-image: url("../assets/alaksiej-carankievic-fBib2mhl-ZE-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+header {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #26292C;
+  color: #FFFAFB;
+}
+
+header h1 {
+  margin: 2vh 0vw;
+  font-size: 9vmin;
+  text-align: center;
 }
 
 main {
