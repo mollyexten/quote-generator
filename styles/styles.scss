@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./header-animation";
 @import "./templates";
 
 // Page styles
@@ -6,15 +7,19 @@ html {
   height: 100%;
   body {
     height: 100%;
-    @include flexSetup(vertical);
-    font-family: $primaryFont;
-    font-size: 24px;
-    margin: 0;
-    background-image: url("../assets/alaksiej-carankievic-fBib2mhl-ZE-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     box-sizing: border-box;
+    margin: 0;
+    @include flexSetup(vertical);
+    font: {
+      family: $primaryFont;
+      size: 24px;
+    }
+    background: {
+      image: url("../assets/alaksiej-carankievic-fBib2mhl-ZE-unsplash.jpg");
+      size: cover;
+      position: center;
+      attachment: fixed;
+    }
   }
 }
 
@@ -27,6 +32,7 @@ header {
   h1 {
     margin: 2vh 0vw;
     font-size: 9vmin;
+    text-align: center;
   }
 }
 
