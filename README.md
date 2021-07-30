@@ -48,7 +48,7 @@ I also found mixins useful for setting the two common flex layouts that I use:
 ```
 
 ## Feature: The Animated Header
-To add a final flourish to this website, I styled the header so that the word generator appears to be typed out. I used [this amazing Code Pen](https://codepen.io/5t3ph/pen/qBdJVEq) as my guide. Roughtly, this involved:
+To add a final flourish to this website, I styled the header so that the word generator appears to be typed out. I used [this amazing Code Pen](https://codepen.io/5t3ph/pen/qBdJVEq) as my guide. Roughly, this involved:
 - creating a span within the h1 tag to hold the text to be animated
 - giving the span two classes to handle (1) keeping text hidden at the beginning and (2) animating the letters printing to the page (increasing the width) and a cursor (changing the border color to create a flicker effect)
   
@@ -69,6 +69,6 @@ My favorite part of creating this header was using a for loop in Sass (!!!):
 ```
  
 ## Reflections
-I learned a lot of useful Sass features through this project, and I can't wait to apply it to my other work. In the future, I plan to learn more about:
+I learned a lot of useful Sass features through this project, especially mixins (with arguments!) and for loops for setting keyframes. I can't wait to apply it to my other work. In the future, I plan to learn more about:
   1. How to best organize my Sass files
   2. The best way to use responsive units for media queries
