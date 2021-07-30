@@ -1,6 +1,7 @@
 const quote = document.querySelector(".quote-div")
 const genreButton = document.querySelector(".genre-button")
 const randomButton = document.querySelector(".random-button")
+const maxLength = 220;
 
 const removeQuote = () => {
   while (quote.lastChild) {
@@ -28,7 +29,7 @@ const loadRandom = async () => {
     const randomURL = "https://quote-garden.herokuapp.com/api/v3/quotes/random"
     const response = await axios.get(randomURL)
     const quoteData = response.data.data[0]
-    if (quoteData.quoteText.length > 220) {
+    if (quoteData.quoteText.length > maxLength) {
       loadRandom();
       return;
     }
@@ -45,7 +46,7 @@ const loadSimilar = async (genre) => {
     const similarURL = `https://quote-garden.herokuapp.com/api/v3/quotes/random?genre=${genre}`
     const response = await axios.get(similarURL)
     const quoteData = response.data.data[0]
-    if (quoteData.quoteText.length > 220) {
+    if (quoteData.quoteText.length > maxLength) {
       loadSimilar(genre);
       return;
     }
