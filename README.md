@@ -23,7 +23,7 @@ Since this is a small website, I set the body height to be 100vh. Everything loo
 ```html, body { height: 100% }```
 
 ### mixins
-Sass mixins were incredibly handy for setting ths color scheme. [Sass documentation](https://sass-lang.com/documentation) was very easy to follow. I was able to pass arguments into these mixins and used a conditional to determine the color scheme:
+Sass mixins were incredibly handy for setting the color scheme. [Sass documentation](https://sass-lang.com/documentation) was very easy to follow. I was able to pass arguments into these mixins and used a conditional to determine the color scheme:
 ```
 @mixin colorScheme($theme) {
   @if $theme == dark {
