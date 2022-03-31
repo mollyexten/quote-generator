@@ -17,4 +17,5 @@ jobs:
         with:
           application-id: Ojc0fnJOoTBgSEZSHUCrhQ-e
           environment-id: PD1IaPsJm9CyMf2A2I3gSQ-a
-          plan-labels: github test
+          plan-labels: |
+              github test
