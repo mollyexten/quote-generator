@@ -4,7 +4,7 @@ On [random quote generator](https://mollyexten.github.io/quote-generator/), user
 
 ## About
 
-The functionality is quite simple - one single Vanilla JS file that handles calling random quotes the Quote Garden API by topic or at large with a filter to keep the quotes under 220 characters.
+The functionality is simple - one single Vanilla JS file makes an API request for a random quote from the Quote Garden API by topic or at large with a filter to keep the quotes under 220 characters.
 
 The **main focus** of this website was to create a **WELL-STYLED WEBSITE**.
 
